@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+  </head>
+  <body class="container">
+
+    <%include partials/startHeader%>
+
+    <h4>Welcome to Furats Web-APP build on Epress JS guide</h4>
+    <!-- <button onclick="showList()"> This is the current list of our grapplers </button> -->
+    <!-- <div id="showMembers"></div> -->
+
+      <a href="/sorts/sortAlpha" id="sortAlphabetically">Sort Alphabetically</a> |
+      <a href="/sorts/sortByStyle" id="sortByStyle" >Sort by style</a>
+
+      <% var i = 0; while(i < members.length) { %>
+        <ul class="memberlist">
+          <li> <%= members[i].Firstname + ' ' + members[i].Lastname + ', ' %> <span id='grapArt'><%= members[i].Grappling %> practitioner</span></li>
+        </ul>
+      <% i++ } %>
+
+    <%include partials/footer%>
+
+    <script type="text/javascript">
+
+        // function showList(){
+        //   var x = document.getElementById("showMembers");
+        //   if (x.style.display === "block") {
+        //       x.style.display = "none";
+        //     }else{
+        //       x.style.display = "block";
+        //     }
+        // }
+
+    </script>
+
+  </body>
+</html>

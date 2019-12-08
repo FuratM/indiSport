@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+  </head>
+  <body class="container">
+    <%include partials/startHeader%>
+
+    <div class="login-page">
+      <div class="form">
+        <h6><%= info_msg %></h6>
+        <form action="process_login" method="post" class="">
+          <input id="mail" type="email" placeholder="Email" name="email_login" required style="width: 50%;"><br><br>
+          <input type="password" placeholder="Password" name="password_login" required style="width: 50%;"><br><br>
+          <button>Login</button>
+          <p class="message">Not registered? <a href="/users/createAccount">Create Account</a></p>
+        </form>
+
+      </div>
+    </div>
+
+    <%include partials/footer%>
+
+    <script type="text/javascript">
+
+    var email = document.getElementById("mail");
+    email.addEventListener("input", function (event) {
+      if (email.validity.typeMismatch) {
+        email.setCustomValidity("An Email is required");
+      } else {
+        email.setCustomValidity("");
+      }
+    });
+
+    </script>
+
+  </body>
+</html>

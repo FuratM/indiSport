@@ -1,0 +1,19 @@
+body{
+  background-color:gray;
+}
+
+#upload_msg{
+  font-style: italic;
+}
+
+#showMembers{
+  display:none;
+}
+
+.memberlist{
+  list-style-type: none;
+}
+
+#grapArt{
+  font-style: italic;
+}

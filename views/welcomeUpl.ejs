@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body class="container">
+
+    <%include partials/insideHeader%>
+
+    <span id="pp" style="color:green;"><%= fileSuccessStatus %></span><br><br>
+
+    <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img" style="width:250px;height:260px;">
+
+    <h3>Hi <%= fname %> </h3>
+    <h5>You are logged in with this mail: <%= email %></h5>
+    <p> Welcome back to the site!!!!</p>
+    <p>Your <%= art %> class will start in 5 hours</p>
+
+    <!-- modal BTN -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="position: relative; left: 45%; top: 2%;">
+  New video
+</button>
+
+<!-- Modal upload form -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload trick video</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+        <form action="/welcomeFileUpload" method="POST" enctype="multipart/form-data">
+          <input type="file" name="skillVideo"><br><br>
+           <!-- <input type="text" name="skillComment" value=""> -->
+          <button type="submit">Upload</button>
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <br><br><hr>
+
+
+    <%include partials/footer%>
+
+  </body>
+</html>
