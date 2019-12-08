@@ -1,4 +1,5 @@
-function gotToWelcome(req, res) {
+function gotToWelcome(req, res) {  //IMPORTANT: A GET AND NOT POST REQUEST BECAUSE WE ARE NOT RECIEVING DATA THROUGH FORM...
+
   if (req.session.email_login) { // req.cookies.email_login / req.session.email_login
     console.log('---------------------->', `uploads/${req.session.p_img}`)
     res.render('welcome', { // req.body.username wont work, we try to get some cookies, not data...

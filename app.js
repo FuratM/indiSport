@@ -1,3 +1,7 @@
+/*
+GIT: status, diff, add, commit
+*/
+
 // DEPENDENCIES & INTEGRATIONS
 const path = require('path'); //Path to view-folder
 const express = require('express');
@@ -10,6 +14,7 @@ const cookieParser = require('cookie-parser'); // HANDLING COOKIES...
 const fs = require('fs');
 const port = 3010;
 
+//----------------- CONTROLLERS --------------------------
 const welcomeController = require('./controllers/welcome');
 
 
@@ -61,8 +66,6 @@ app.use(function(req, res, next){
 })
 
 
-
-//IMPORTANT: A GET AND NOT POST REQUEST BECAUSE WE ARE NOT RECIEVING DATA THROUGH FORM...
 app.get('/welcome', function(req, res, next){
   welcomeController.gotToWelcome(req, res);
 });
