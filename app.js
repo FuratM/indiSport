@@ -38,19 +38,12 @@ app.use(session({secret:'app_session'})); // session handling...
 app.set('view engine', 'ejs'); // EJS as template...
 app.set('views', path.join(__dirname, 'views')); // when res.render LOOK INTO THE VIEWS-folder
 
-// -------------------------CREATE ACCOUNT----------------------------
-app.use(function(req, res, next){
 
-  if (!req.query.emailStatus) {
-    res.locals.mailMsg = '';
-  }else if(req.query.emailStatus === 'emailTaken'){
-    res.locals.mailMsg = 'This email is already taken!';
-  }
-
-  next(); // throw above to the next middleware
-
-})
-
+//-------------------- ROUTES ------------------------
+app.use('/', require('./routes/landing'));  // url, where we get the route from
+app.use('/users', require('./routes/users'));
+app.use('/spaces', require('./routes/spaces'));
+app.use('/dbView', require('./routes/dbView'));
 
 app.use(function(req, res, next){
 
@@ -66,11 +59,7 @@ app.use(function(req, res, next){
 })
 
 
-//-------------------- ROUTES ------------------------
-app.use('/', require('./routes/landing'));  // url, where we get the route from
-app.use('/users', require('./routes/users'));
-app.use('/spaces', require('./routes/spaces'));
-app.use('/dbView', require('./routes/dbView'));
+
 //IMPORTANT: A GET AND NOT POST REQUEST BECAUSE WE ARE NOT RECIEVING DATA THROUGH FORM...
 app.get('/welcome', function(req, res, next){
 
@@ -89,11 +78,6 @@ app.get('/welcome', function(req, res, next){
 
 })
 
-app.get('/users/logout', function(req, res, next){
-  // res.clearCookie('email_login');
-  req.session.destroy();
-  res.redirect('/users/login'); // redirect and give info to the user that he/she successfully logged out...
-})
 
 //--------------------FILE UPLOAD----------------------------
 //MULTER STORAGE
@@ -155,6 +139,7 @@ app.post('/welcomeFileUpload', function(req, res, next){
       res.redirect('/welcome?file=notUploaded');
     }else{
       console.log(req.file);
+      req.session.p_img = req.file.filename; // can be possible because SESSION is EVERYWHERE...
       res.render('welcomeUpl', { // req.body.username wont work, we try to get some cookies, not data...
          email: req.session.email_login, //name: username, value: req.cookies.username
          fname: req.session.fname,
