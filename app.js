@@ -10,6 +10,8 @@ const cookieParser = require('cookie-parser'); // HANDLING COOKIES...
 const fs = require('fs');
 const port = 3010;
 
+const welcomeController = require('./controllers/welcome');
+
 
 //------------------- DB CONNECTION -------------------
 
@@ -62,22 +64,8 @@ app.use(function(req, res, next){
 
 //IMPORTANT: A GET AND NOT POST REQUEST BECAUSE WE ARE NOT RECIEVING DATA THROUGH FORM...
 app.get('/welcome', function(req, res, next){
-
-  if (req.session.email_login) { // req.cookies.email_login / req.session.email_login
-    console.log('---------------------->', `uploads/${req.session.p_img}`)
-    res.render('welcome', { // req.body.username wont work, we try to get some cookies, not data...
-       email: req.session.email_login, //name: username, value: req.cookies.username
-       fname: req.session.fname,
-       art: req.session.art,
-       p_img: req.session.p_img, // profile image to be sent into the view...
-       file: `uploads/${req.session.p_img}`
-    });
-  }else{
-    res.redirect('/users/login?msg=noLogin');
-  }
-
-})
-
+  welcomeController.gotToWelcome(req, res);
+});
 
 //--------------------FILE UPLOAD----------------------------
 //MULTER STORAGE
