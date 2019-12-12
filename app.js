@@ -1,6 +1,4 @@
-/*
-GIT: status, diff, add, commit
-*/
+/* GIT: status, diff, add, restore, commit */
 
 // DEPENDENCIES & INTEGRATIONS
 const path = require('path'); //Path to view-folder
@@ -19,7 +17,6 @@ const welcomeController = require('./controllers/welcome');
 
 
 //------------------- DB CONNECTION -------------------
-
 var connection = mysql.createConnection({
   //properties
   host:'localhost',
@@ -110,11 +107,7 @@ function checkFileType(file, cb){
 
 // UPLOAD MULTER-VARIABLEKEY
 const upload = multer({
-  // app.get('*', function(req, res) {
-    //   res.render('sysMsgs/urlERR', {
-      //     titlename: 'Page not found'
-      //   })
-      // });
+
   storage: storage,
   limits: {fileSize: 1000000}, //ERR if file is bigger than limits (1mb)
   fileFilter: function(req, file, cb){
