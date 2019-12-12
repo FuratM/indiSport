@@ -1,4 +1,4 @@
-/* GIT: status, diff, add, restore, commit */
+/* GIT: status, diff, add, restore, commit, push */
 
 // DEPENDENCIES & INTEGRATIONS
 const path = require('path'); //Path to view-folder
