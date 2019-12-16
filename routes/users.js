@@ -139,12 +139,7 @@ router.use(function(req, res, next){
   next();
 })
 
-
-router.get('/welcome', function(req, res, next){
-  welcomeController.gotToWelcome(req, res);
-});
-
-
+ppp
 router.get('/logout', function(req, res, next){
   // res.clearCookie('email_login');
   req.session.destroy();

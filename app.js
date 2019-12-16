@@ -5,6 +5,8 @@ diff: difference inside our changes
 add: ready to commit. If we dont 'add' AND commit, it will not commit the most recent editing.
 If we use 'git add .' it will add all changes weve made
 restore: If you regret, you can go back to previous code
+log: overview of all changes
+checkout: after 'log' you grab the number and then checkout to that file-change --> git checkout 1234 -- specificFile.js
 commit: commit -m '' to make a msg
 push: put commit into github
 */
@@ -58,23 +60,23 @@ app.use('/users', require('./routes/users'));
 app.use('/spaces', require('./routes/spaces'));
 app.use('/dbView', require('./routes/dbView'));
 
-// app.use(function(req, res, next){
-//
-//   if (req.query.file === 'uploaded') {
-//     res.locals.file_msg = 'File successfully uploaded!';
-//   }else if(req.query.file === 'notUploaded'){
-//     res.locals.file_msg = 'Not uploaded.. Please choose an image!';
-//   }else{
-//     res.locals.file_msg = '';
-//   }
-//
-//   next();
-// })
+app.use(function(req, res, next){
+
+  if (req.query.file === 'uploaded') {
+    res.locals.file_msg = 'File successfully uploaded!';
+  }else if(req.query.file === 'notUploaded'){
+    res.locals.file_msg = 'Not uploaded.. Please choose an image!';
+  }else{
+    res.locals.file_msg = '';
+  }
+
+  next();
+})
 
 
-// app.get('/welcome', function(req, res, next){
-//   welcomeController.gotToWelcome(req, res);
-// });
+app.get('/welcome', function(req, res, next){
+  welcomeController.gotToWelcome(req, res);
+});
 
 //--------------------FILE UPLOAD----------------------------
 //MULTER STORAGE
