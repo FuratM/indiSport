@@ -11,6 +11,7 @@ var connection = mysql.createConnection({
   database: 'expressGuideDB'
 });
 
+
 // -------------------------CREATE ACCOUNT----------------------------
 router.use(function(req, res, next){
 
@@ -124,6 +125,7 @@ router.post('/process_login', function(req, res, next){
   //res.json(req.body) //req.body is made by urlencoded: parses http msg for sent data. data from form comes in here...
 })
 
+
 router.use(function(req, res, next){
 
   if (req.query.file === 'uploaded') {
@@ -136,6 +138,11 @@ router.use(function(req, res, next){
 
   next();
 })
+
+
+router.get('/welcome', function(req, res, next){
+  welcomeController.gotToWelcome(req, res);
+});
 
 
 router.get('/logout', function(req, res, next){

@@ -1,4 +1,13 @@
-/* GIT: status, diff, add, restore, commit, push */
+/* GIT ---> https://www.youtube.com/watch?v=Y9XZQO1n_7c MIN.12
+init: inside dev-folder
+status: overview for recent changes
+diff: difference inside our changes
+add: ready to commit. If we dont 'add' AND commit, it will not commit the most recent editing.
+If we use 'git add .' it will add all changes weve made
+restore: If you regret, you can go back to previous code
+commit: commit -m '' to make a msg
+push: put commit into github
+*/
 
 // DEPENDENCIES & INTEGRATIONS
 const path = require('path'); //Path to view-folder
@@ -49,23 +58,23 @@ app.use('/users', require('./routes/users'));
 app.use('/spaces', require('./routes/spaces'));
 app.use('/dbView', require('./routes/dbView'));
 
-app.use(function(req, res, next){
+// app.use(function(req, res, next){
+//
+//   if (req.query.file === 'uploaded') {
+//     res.locals.file_msg = 'File successfully uploaded!';
+//   }else if(req.query.file === 'notUploaded'){
+//     res.locals.file_msg = 'Not uploaded.. Please choose an image!';
+//   }else{
+//     res.locals.file_msg = '';
+//   }
+//
+//   next();
+// })
 
-  if (req.query.file === 'uploaded') {
-    res.locals.file_msg = 'File successfully uploaded!';
-  }else if(req.query.file === 'notUploaded'){
-    res.locals.file_msg = 'Not uploaded.. Please choose an image!';
-  }else{
-    res.locals.file_msg = '';
-  }
 
-  next();
-})
-
-
-app.get('/welcome', function(req, res, next){
-  welcomeController.gotToWelcome(req, res);
-});
+// app.get('/welcome', function(req, res, next){
+//   welcomeController.gotToWelcome(req, res);
+// });
 
 //--------------------FILE UPLOAD----------------------------
 //MULTER STORAGE
