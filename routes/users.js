@@ -139,7 +139,7 @@ router.use(function(req, res, next){
   next();
 })
 
-ppp
+
 router.get('/logout', function(req, res, next){
   // res.clearCookie('email_login');
   req.session.destroy();

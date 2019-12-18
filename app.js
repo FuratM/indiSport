@@ -5,8 +5,8 @@ diff: difference inside our changes
 add: ready to commit. If we dont 'add' AND commit, it will not commit the most recent editing.
 If we use 'git add .' it will add all changes weve made
 restore: If you regret, you can go back to previous code
-log: overview of all changes
-checkout: after 'log' you grab the number and then checkout to that file-change --> git checkout 1234 -- specificFile.js
+log: git log in order to get the full overview of the activities and activities-numbers
+checkout: when git-logging you can do 'git checkout 123456 -- specificFile.js'
 commit: commit -m '' to make a msg
 push: put commit into github
 */
