@@ -75,7 +75,7 @@ app.use(function(req, res, next){
 
 
 app.get('/welcome', function(req, res, next){
-  welcomeController.gotToWelcome(req, res);
+  welcomeController.goToWelcome(req, res);
 });
 
 //--------------------FILE UPLOAD----------------------------

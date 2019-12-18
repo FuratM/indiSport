@@ -1,4 +1,4 @@
-function gotToWelcome(req, res) {  //IMPORTANT: A GET AND NOT POST REQUEST BECAUSE WE ARE NOT RECIEVING DATA THROUGH FORM...
+function goToWelcome(req, res) {  //IMPORTANT: A GET AND NOT POST REQUEST BECAUSE WE ARE NOT RECIEVING DATA THROUGH FORM...
 
   if (req.session.email_login) { // req.cookies.email_login / req.session.email_login
     console.log('---------------------->', `uploads/${req.session.p_img}`)
@@ -15,5 +15,5 @@ function gotToWelcome(req, res) {  //IMPORTANT: A GET AND NOT POST REQUEST BECAU
 }
 
 module.exports = {
-  gotToWelcome: gotToWelcome
+  goToWelcome: goToWelcome
 }
