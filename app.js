@@ -61,6 +61,7 @@ app.use('/users', require('./routes/users'));
 app.use('/spaces', require('./routes/spaces'));
 app.use('/dbView', require('./routes/dbView'));
 
+//move this to another folder
 app.use(function(req, res, next){
 
   if (req.query.file === 'uploaded') {
@@ -75,6 +76,7 @@ app.use(function(req, res, next){
 })
 
 
+//move this to users-folder.. remember try: /users/welcome
 app.get('/welcome', function(req, res, next){
   welcomeController.goToWelcome(req, res);
 });
