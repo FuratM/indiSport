@@ -62,18 +62,18 @@ app.use('/spaces', require('./routes/spaces'));
 app.use('/dbView', require('./routes/dbView'));
 
 //move this to another folder
-// app.use(function(req, res, next){
-//
-//   if (req.query.file === 'uploaded') {
-//     res.locals.file_msg = 'File successfully uploaded!';
-//   }else if(req.query.file === 'notUploaded'){
-//     res.locals.file_msg = 'Not uploaded.. Please choose an image!';
-//   }else{
-//     res.locals.file_msg = '';
-//   }
-//
-//   next();
-// })
+app.use(function(req, res, next){
+
+  if (req.query.file === 'uploaded') {
+    res.locals.file_msg = 'File successfully uploaded!';
+  }else if(req.query.file === 'notUploaded'){
+    res.locals.file_msg = 'Not uploaded.. Please choose an image!';
+  }else{
+    res.locals.file_msg = '';
+  }
+
+  next();
+})
 
 
 //move this to users-folder.. remember try: /users/welcome
