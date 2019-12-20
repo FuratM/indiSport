@@ -1,4 +1,4 @@
-/* GIT ---> https://www.youtube.com/watch?v=Y9XZQO1n_7c MIN.12
+/* GIT ---> https://www.youtube.com/watch?v=c3482qAzZLQ MIN.5
 init: inside dev-folder
 status: overview for recent changes
 diff: difference inside our changes
@@ -7,7 +7,7 @@ If we use 'git add .' it will add all changes weve made
 restore: If you regret, you can go back to previous code
 log: git log in order to get the full overview of the activities and activities-numbers
 checkout: when git-logging you can do 'git checkout 123456 -- specificFile.js' if you use '.' that means all
-checkout: or you can do "git checkout id (123456)" to go back to a specific log 
+checkout: or you can do "git checkout id (123456)" to go back to a specific log
 commit: commit -m '' to make a msg
 push: put commit into github
 */
