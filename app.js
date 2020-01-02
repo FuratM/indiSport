@@ -1,11 +1,11 @@
-/* GIT with net-ninja ---> https://www.youtube.com/watch?v=RIYrfkZjWmA&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR&index=7 --> express+react: https://www.youtube.com/watch?v=v0t42xBIYIs
+/* GIT with net-ninja ---> https://www.youtube.com/watch?v=QV0kVNvkMxc&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR&index=8
 init: inside dev-folder
 status: overview for recent changes
 diff: difference inside our changes
 add: ready to commit. If we dont 'add' AND commit, it will not commit the most recent editing.
 If we use 'git add .' it will add all changes weve made
 restore: If you regret, you can go back to previous code
-log: git log in order to get the full overview of the activities and activities-numbers. You can also do: git log --oneline (more simple overview)
+log: git log in order to get the full overview of the activities and activities-numbers
 checkout: when git-logging you can do 'git checkout 123456 -- specificFile.js' if you use '.' that means all
 checkout: or you can do "git checkout id (123456)" to go back to a specific log
 commit: commit -m '' to make a msg
