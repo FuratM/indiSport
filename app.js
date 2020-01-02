@@ -130,7 +130,7 @@ const upload = multer({
 }).single('skillVideo');
 
 
-app.post('/welcomeFileUpload', function(req, res, next){
+app.post('/welcome-FileUpload', function(req, res, next){
 
   upload(req, res, function(err){
     if(req.file === undefined) {
