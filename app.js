@@ -1,4 +1,4 @@
-/* GIT with net-ninja ---> https://www.youtube.com/watch?v=XX-Kct0PfFc&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR&index=9
+/* GIT with net-ninja ---> https://www.youtube.com/watch?v=fQLK8Ib_SKk&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR&index=10
 init: inside dev-folder
 status: overview for recent changes
 diff: difference inside our changes
