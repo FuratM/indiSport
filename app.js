@@ -15,6 +15,7 @@ branches --> switch to another branch: git checkout b1
 branches --> delete branch: git branch -D b1 (if merged -d)
 merge --> have to be on master-branch to merge content into that...
 merge --> inside master-branch: git merge b1
+merge --> look at video 9 to get ALL details from here.......
 push: put commit into github
 */
 
