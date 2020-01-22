@@ -1,23 +1,3 @@
-/* GIT with net-ninja ---> https://www.youtube.com/watch?v=fQLK8Ib_SKk&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR&index=10
-init: inside dev-folder
-status: overview for recent changes
-diff: difference inside our changes
-add: ready to commit. If we dont 'add' AND commit, it will not commit the most recent editing.
-If we use 'git add .' it will add all changes weve made
-restore: If you regret, you can go back to previous code
-log: git log in order to get the full overview of the activities and activities-numbers
-checkout: when git-logging you can do 'git checkout 123456 -- specificFile.js' if you use '.' that means all
-checkout: or you can do "git checkout id (123456)" to go back to a specific log
-commit: commit -m '' (to make a msg)
-branches --> create a branch: git branch b1
-branches --> branch overview: git branch -a
-branches --> switch to another branch: git checkout b1
-branches --> delete branch: git branch -D b1 (if merged -d)
-merge --> have to be on master-branch to merge content into that...
-merge --> inside master-branch: git merge b1
-merge --> look at video 9 to get ALL details from here.......
-push --> git push https://github.com/etc master (put commit into github)
-*/
 
 // DEPENDENCIES & INTEGRATIONS
 const path = require('path'); //Path to view-folder
