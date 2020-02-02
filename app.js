@@ -11,9 +11,6 @@ const cookieParser = require('cookie-parser'); // HANDLING COOKIES...
 const fs = require('fs');
 const port = 3010;
 
-//----------------- CONTROLLERS --------------------------
-//const welcomeController = require('./controllers/welcome');
-
 
 //------------------- DB CONNECTION -------------------
 var connection = mysql.createConnection({
