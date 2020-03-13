@@ -42,7 +42,6 @@ app.set('views', path.join(__dirname, 'views')); // when res.render LOOK INTO TH
 //-------------------- ROUTES ------------------------
 app.use('/', require('./routes/landing'));  // url, where we get the route from
 app.use('/users', require('./routes/users'));
-app.use('/spaces', require('./routes/spaces'));
 app.use('/dbView', require('./routes/dbView'));
 
 //move this to another folder
