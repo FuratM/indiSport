@@ -151,8 +151,6 @@ app.post('/welcome-FileUpload', function(req, res, next){
 
 
 //--------------------- system messages --------------------------------
-// app.use('/', require('./routes/multerUpload'));
-// app.use('/', require('./routes/dbConn'));
 app.use('*', require('./routes/sysMsg'));
 
 app.listen(port, function(){
