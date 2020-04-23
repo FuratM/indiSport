@@ -89,7 +89,7 @@ const storage = multer.diskStorage({
     // Save the file in the disk
     cb(null, imageName);
     // SAVE AND CHANGE IMAGE IN DB
-    const updateQuery = 'UPDATE apptable SET profileImg = "'+ imageName +'" WHERE ID=' + req.session.ID;
+    const updateQuery = 'UPDATE apptable SET img_vidoes = "'+ imageName +'" WHERE ID=' + req.session.ID;
     console.log('this is the query for the update :', updateQuery);
     connection.query(updateQuery, function(err, rows){
       if (err) {

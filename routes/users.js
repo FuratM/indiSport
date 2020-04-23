@@ -112,7 +112,7 @@ router.post('/process_login', function(req, res, next){
               req.session.ID = rows[0].ID;
               req.session.fname = rows[0].Firstname;
               req.session.art = rows[0].Grappling;
-              req.session.p_img = rows[0].profileImg; // for the profile image...
+              req.session.p_img = rows[0].img_vidoes; // for the profile image...
               res.redirect('/welcome');
             }else {
               res.redirect('/users/login?msg=fail');
